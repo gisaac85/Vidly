@@ -1,10 +1,10 @@
 ﻿@model Vidly.ViewModels.CustomerFormViewModel
 @{
-    ViewBag.Title = "New Customer";
+    ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Title</h2>
+<h2>New Customer</h2>
 
 @using (Html.BeginForm("Save", "Customers"))
 {
@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Customers.MembershipTypeId)
-        @Html.DropDownListFor(m => m.Customers.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new {@class = "form-control"})
+        @Html.DropDownListFor(m => m.Customers.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
     </div>
     <div class="checkbox">
         <label>
@@ -26,5 +26,5 @@
         </label>
     </div>
     @Html.HiddenFor(m => m.Customers.Id)
-    <button type="submit" class="btn btn-primary">Save</button>    
+    <button type="submit" class="btn btn-primary">Save</button>
 }
