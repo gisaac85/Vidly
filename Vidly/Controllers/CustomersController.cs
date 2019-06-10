@@ -46,31 +46,26 @@ namespace Vidly.Controllers
                 customerInDb.MembershipTypeId = customer.Customers.MembershipTypeId;
                 customerInDb.IsSubscribedToNewsletter = customer.Customers.IsSubscribedToNewsletter;
             }
-
-            try
-            {
-
-                _context.SaveChanges();
-            }
-            catch (DbEntityValidationException ex)
-            {
-                string errorMessage = "";
-                foreach (var errors in ex.EntityValidationErrors)
-                {
-                    foreach (var validationError in errors.ValidationErrors)
-                    {
-
-                        errorMessage = validationError.ErrorMessage;
-                    }
-
-                    return Content(errorMessage);
-                }
-            }
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Customers");
+            //catch (DbEntityValidationException ex)
+            //{
+            //    string errorMessage = "";
+            //    foreach (var errors in ex.EntityValidationErrors)
+            //    {
+            //        foreach (var validationError in errors.ValidationErrors)
+            //        {
+
+            //            errorMessage = validationError.ErrorMessage;
+            //        }
+
+            //        return Content(errorMessage);
+            //    }
+            //}
         }
 
-        
+
 
         public ViewResult Index()
         {
