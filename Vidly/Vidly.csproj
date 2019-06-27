@@ -271,6 +271,18 @@
     <Compile Include="Migrations\201906101113176_EditGenreANDMovieModels.Designer.cs">
       <DependentUpon>201906101113176_EditGenreANDMovieModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906101142491_EditCustomerModel.cs" />
+    <Compile Include="Migrations\201906101142491_EditCustomerModel.Designer.cs">
+      <DependentUpon>201906101142491_EditCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906101143573_EditCustomerModel1.cs" />
+    <Compile Include="Migrations\201906101143573_EditCustomerModel1.Designer.cs">
+      <DependentUpon>201906101143573_EditCustomerModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906101145109_EditCustomerModel2.cs" />
+    <Compile Include="Migrations\201906101145109_EditCustomerModel2.Designer.cs">
+      <DependentUpon>201906101145109_EditCustomerModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -439,6 +451,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906101113176_EditGenreANDMovieModels.resx">
       <DependentUpon>201906101113176_EditGenreANDMovieModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101142491_EditCustomerModel.resx">
+      <DependentUpon>201906101142491_EditCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101143573_EditCustomerModel1.resx">
+      <DependentUpon>201906101143573_EditCustomerModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906101145109_EditCustomerModel2.resx">
+      <DependentUpon>201906101145109_EditCustomerModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
